@@ -1,11 +1,14 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def index():
-    return "microsoft信者"
+    sum=['たこやき','おいしい','マヨネーズ','と','ソース','いつも','かけてる','まじで',"おいしい"]
+    return render_template("index.html",sum=sum)
+
+
 
 
 if __name__ == '__main__':
